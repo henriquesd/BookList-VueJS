@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Book List</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+     <div id="app" class="container">
+          <h2>{{header}}</h2>
+         
+         <input v-model="newBook" @keyup.enter="addBook"
+             placeholder="Title" type="text" 
+             class="form-control"> <br/>
+          <input v-model="newAuthor" @keyup.enter="addBook"
+             placeholder="Author" type="text" 
+             class="form-control"> <br>
+          <input v-model="newPublisher" @keyup.enter="addBook"
+             placeholder="Publisher" type="text" 
+             class="form-control"> <br>
+
+          <span class="input-group-btn"> 
+             <button @click="addBook" class="js-add btn btn-primary btn-block" 
+                type="button">Add</button> 
+          </span>
+
+          <ul>
+           <li v-for="book in books" v-bind:class="{ 'removed': book.checked }">
+            <div class="checkbox">
+             <label>
+              <input class="js-book" name="list" type="checkbox" v-model="book.checked">
+              <big>{{book.title}}</big> - <small>{{book.author}}</small> <br/> <small>{{book.publisher}}</small>
+             </label>
+            </div>
+           </li>
+          </ul>
+          <div class="footer">
+           <hr/>
+           <em>Change the list title:</em>
+           <input v-model="header"/>
+          </div>
+    </div>
+  </body>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.8/vue.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script type="text/javascript" src="js/index-Vue.js"></script>
+</html>

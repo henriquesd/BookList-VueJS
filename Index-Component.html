@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Book List</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <div id="app" class="container">
+    <h2>{{header}}</h2>
+    <add-item-component></add-item-component>
+    <itens-component></itens-component>
+    <div class="footer">
+      <hr/>
+      <em>Change the list title:</em>
+      <change-title-component></change-title-component>
+    </div>
+  </div>
+</body>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.8/vue.js"></script>
+<script type="text/javascript" src="js/index-Component.js"></script>
+
+</html>

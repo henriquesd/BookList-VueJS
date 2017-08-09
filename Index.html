@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Book List</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <h2>My Books - JavaScript</h2>
+      <input placeholder="Title" type="text" class="js-new-book form-control"> <br>
+      <input placeholder="Author" type="text" class="js-new-author form-control"> <br>
+      <input placeholder="Publisher" type="text" class="js-new-publisher form-control"> <br>
+      <button @click="addItem" class="js-add btn btn-primary btn-block" type="button">Add</button>      
+      <ul>
+        <li>
+          <div class="checkbox">
+            <label>
+                <input class="js-book" name="list" type="checkbox">
+                <big>The Hobbit</big> - <small>J.R.R. Tolkien</small> <br/>
+                <small>Houghton Mifflin Harcourt</small>
+              </label>
+          </div>
+        </li>
+        <li>
+          <div class="checkbox">
+            <label>
+                <input class="js-book" name="list" type="checkbox" />
+                <big>Lord of The Rings - The Return of the King</big> - <small>J.R.R. Tolkien</small> <br/> 
+                <small>Mariner Books</small>
+              </label>
+          </div>
+        </li>
+        <li class="removed">
+          <div class="checkbox">
+            <label>
+                <input class="js-book"  name="list"  type="checkbox" checked>
+                <big>Under the Dome</big> - <small>Stephen King</small> <br/>
+                <small>Gallery Books</small>
+              </label>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </body>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script type="text/javascript" src="js/index.js"></script>
+</html>
